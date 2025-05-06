@@ -170,7 +170,7 @@ dead = False
 # }
 
 # game loop
-while not dead:
+while not dead: => while not True => while False
   print("\n")
   describe_cave(current_cave)
 
@@ -209,7 +209,8 @@ while not dead:
           
           if len(bag) == 0:
             print("Congratulations, you have survived another adventure!")
-            dead = True
+            
+          dead = True
                 
         else:
           print("Scurry home, you lost the fight.")
