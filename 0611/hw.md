@@ -55,7 +55,28 @@
 
   ```
 
-  2. 각 셀 값은 문자열(str)이므로 int(), float()를 사용하여 변환
+  2. 각 셀 값은 문자열(str)이므로 int(), float()를 사용하여 
+  
+  
+  3. `views/report_view.py` 파일에 함수를 만들어서,
+보기 좋은 형식으로 출력만 담당
+
+  - 예시 코드: 
+  ```python
+  # views/report_view.py
+
+  def print_total_per_customer(totals):
+    print("🧾 고객별 총 주문 금액:")
+    for name, total in totals.items():
+      print(f" - {name}: ${total:.1f}")
+  ```
+
+  - `main.py`에서 사용하는 법
+  ```python
+  from views.report_view import print_total_per_customer
+
+  print_total_per_customer(customer_totals)
+  ```
   </details>
 
 - csv 파일: [orders.csv](./orders.csv)
