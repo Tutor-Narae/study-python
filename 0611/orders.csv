@@ -1,0 +1,6 @@
+order_id,customer_name,product,quantity,price
+1001,Alice,Mouse,2,25.50
+1002,Bob,Keyboard,1,45.00
+1003,Charlie,Monitor,1,invalid_price
+1004,Dave,Mouse,3,25.50
+1005,Alice,Keyboard,1,45.00
