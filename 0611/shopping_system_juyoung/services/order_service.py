@@ -10,11 +10,14 @@ def read_orders():
   with open(file_path, newline='', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
-      order = Order(order_id = row['order_id'],
-        customer = row['customer_name'],
-        product = row['product'],
-        quantity = row['quantity'],
-        price = row['price']
+      clean_row = {k.strip(): v for k, v in row.items()}
+      print(clean_row)
+      
+      order = Order(order_id = clean_row['order_id'],
+        customer = clean_row['customer_name'],
+        product = clean_row['product'],
+        quantity = clean_row['quantity'],
+        price = clean_row['price']
       )
       orders.append(order)
 
